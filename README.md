@@ -25,12 +25,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+   Session cookies only work across a single domain, or on its subdomains. JSON web tokens, can authenticate a user across multiple locations including multiple domains, mobile devices, and APIs. This is because they're stored locally in the request header.
 
-2. What does `bcrypt` do to help us store passwords in a secure manner.
+2) What does `bcrypt` do to help us store passwords in a secure manner.
+   BCrypt salt passwords before they hash them using a random string. This random string is stored alongside the password hash and is used to help make the password harder to crack by making the output unique.
 
 3. How are unit tests different from integration and end-to-end testing.
+   Unit testing means testing individual modules of an application in isolation (without any interaction with dependencies) to confirm that the code is doing things right. Integration testing means checking if different modules are working fine when combined together as a group. End to End testing is where you go from point a to z and you touch various different points on the way there
 
-4. How _Test Driven Development_ changes the way we write applications and tests.
+4) How _Test Driven Development_ changes the way we write applications and tests.
+   The first step is to quickly add a test, basically just enough code to fail. Next you run your tests, often the complete test suite although for sake of speed you may decide to run only a subset, to ensure that the new test does in fact fail. You then update your functional code to make it pass the new tests. The fourth step is to run your tests again. If they fail you need to update your functional code and retest. Once the tests pass the next step is to start over
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
